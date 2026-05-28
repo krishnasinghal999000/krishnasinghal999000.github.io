@@ -279,71 +279,26 @@ nav{
   font-weight:800;
 }
 
-/* QUOTE SECTION */
+/* CTA */
 
-.quote-section{
+.cta{
   padding:7rem 2rem;
   text-align:center;
 }
 
-.quote-section h2{
+.cta h2{
   font-family:'Syne',sans-serif;
   font-size:clamp(40px,6vw,70px);
 }
 
-.quote-section p{
+.cta p{
   margin-top:1rem;
   color:var(--muted);
   font-size:18px;
 }
 
-.quote-box{
-  max-width:800px;
-  margin:3rem auto 0;
-  background:var(--card);
-  padding:40px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,0.06);
-}
-
-.quote-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-form input,
-form textarea{
-  width:100%;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:14px;
-  padding:15px;
-  color:#fff;
-  font-size:15px;
-  outline:none;
-  font-family:'DM Sans',sans-serif;
-}
-
-form textarea{
-  margin-top:18px;
-  resize:vertical;
-}
-
-form input::placeholder,
-form textarea::placeholder{
-  color:#4a7fa0;
-}
-
-form input:focus,
-form textarea:focus{
-  border-color:var(--teal);
-}
-
-.submit-btn{
-  margin-top:20px;
-  border:none;
-  cursor:pointer;
+.contact-buttons{
+  margin-top:2rem;
 }
 
 /* FOOTER */
@@ -410,10 +365,6 @@ footer{
     font-size:17px;
   }
 
-  .quote-grid{
-    grid-template-columns:1fr;
-  }
-
 }
 
 </style>
@@ -433,10 +384,11 @@ footer{
     <li><a href="#problem">Problem</a></li>
     <li><a href="#technology">Technology</a></li>
     <li><a href="#market">Market</a></li>
-    <li><a href="#quote">Quote</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <a href="#quote" class="nav-cta">
+  <a href="mailto:krishnasinghal999000@gmail.com?subject=ClimaPure%20Quote%20Request&body=Hello%20ClimaPure,%0D%0A%0D%0APlease%20find%20my%20home%20details%20below:%0D%0A%0D%0APlot%20Size:%20%0D%0ANumber%20of%20Floors:%20%0D%0ARooms%20Per%20Floor:%20%0D%0ACity:%20%0D%0A%0D%0AAdditional%20Details:%20"
+     class="nav-cta">
     Get a Quote
   </a>
 
@@ -465,7 +417,8 @@ footer{
       See How It Works
     </a>
 
-    <a href="#quote" class="btn-outline">
+    <a href="mailto:krishnasinghal999000@gmail.com?subject=ClimaPure%20Quote%20Request&body=Hello%20ClimaPure,%0D%0A%0D%0APlease%20find%20my%20home%20details%20below:%0D%0A%0D%0APlot%20Size:%20%0D%0ANumber%20of%20Floors:%20%0D%0ARooms%20Per%20Floor:%20%0D%0ACity:%20%0D%0A%0D%0AAdditional%20Details:%20"
+       class="btn-outline">
       Request Installation
     </a>
 
@@ -634,68 +587,24 @@ footer{
 
 </section>
 
-<!-- QUOTE SECTION -->
+<!-- CONTACT -->
 
-<section class="quote-section" id="quote">
+<section class="cta" id="contact">
 
   <h2>
-    Get Your ClimaPure Quote
+    Ready to breathe differently?
   </h2>
 
   <p>
-    Share your home details and receive a custom assessment.
+    Contact ClimaPure for your custom earth-air climate solution.
   </p>
 
-  <div class="quote-box">
+  <div class="contact-buttons">
 
-    <form action="mailto:krishnasinghal999000@gmail.com"
-          method="POST"
-          enctype="text/plain">
-
-      <div class="quote-grid">
-
-        <input type="text"
-               name="Name"
-               placeholder="Your Name"
-               required>
-
-        <input type="text"
-               name="City"
-               placeholder="City"
-               required>
-
-        <input type="text"
-               name="Plot Size"
-               placeholder="Plot Size (e.g. 200 sq yd)"
-               required>
-
-        <input type="text"
-               name="Floors"
-               placeholder="Number of Floors"
-               required>
-
-        <input type="text"
-               name="Rooms Per Floor"
-               placeholder="Rooms Per Floor"
-               required>
-
-        <input type="email"
-               name="Email"
-               placeholder="Your Email"
-               required>
-
-      </div>
-
-      <textarea name="Project Details"
-                rows="5"
-                placeholder="Tell us about your project..."></textarea>
-
-      <button type="submit"
-              class="btn-primary submit-btn">
-        Request Quote
-      </button>
-
-    </form>
+    <a href="mailto:krishnasinghal999000@gmail.com"
+       class="btn-primary">
+      Contact ClimaPure
+    </a>
 
   </div>
 
