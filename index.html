@@ -1,14 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ClimaPure — Earth. Air. Balance.</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -22,7 +25,6 @@
   --teal:#1bbc9b;
   --muted:#4a7fa0;
   --light:#d8f0ee;
-  --white:#f0faf8;
 }
 
 html{
@@ -36,7 +38,7 @@ body{
   overflow-x:hidden;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
   position:fixed;
@@ -48,7 +50,7 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(6,15,26,0.85);
+  background:rgba(6,15,26,0.9);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,0.05);
 }
@@ -72,8 +74,8 @@ nav{
 }
 
 .nav-links a{
-  color:var(--muted);
   text-decoration:none;
+  color:var(--muted);
   transition:0.3s;
 }
 
@@ -84,10 +86,15 @@ nav{
 .nav-cta{
   background:var(--teal);
   color:#061018;
-  text-decoration:none;
-  padding:10px 22px;
+  padding:12px 24px;
   border-radius:30px;
+  text-decoration:none;
   font-weight:600;
+  transition:0.3s;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px);
 }
 
 /* HERO */
@@ -99,7 +106,7 @@ nav{
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:7rem 2rem 4rem;
+  padding:8rem 2rem 4rem;
   position:relative;
 }
 
@@ -108,16 +115,16 @@ nav{
   position:absolute;
   width:700px;
   height:700px;
-  border-radius:50%;
   background:radial-gradient(circle,rgba(27,188,155,0.08),transparent 70%);
+  border-radius:50%;
   z-index:-1;
 }
 
 .hero-tag{
-  background:rgba(27,188,155,0.1);
+  background:rgba(27,188,155,0.08);
   border:1px solid rgba(27,188,155,0.2);
   color:var(--teal);
-  padding:8px 16px;
+  padding:8px 18px;
   border-radius:30px;
   font-size:12px;
   letter-spacing:2px;
@@ -126,9 +133,9 @@ nav{
 
 .hero h1{
   font-family:'Syne',sans-serif;
-  font-size:clamp(52px,8vw,92px);
+  font-size:clamp(60px,10vw,100px);
   font-weight:800;
-  color:#fff;
+  line-height:1;
 }
 
 .hero h1 span{
@@ -136,14 +143,15 @@ nav{
 }
 
 .hero-sub{
-  max-width:700px;
+  max-width:750px;
+  margin-top:1.5rem;
   color:var(--muted);
-  font-size:20px;
   line-height:1.8;
-  margin:1.5rem 0 2.5rem;
+  font-size:20px;
 }
 
 .hero-btns{
+  margin-top:2.5rem;
   display:flex;
   gap:1rem;
   flex-wrap:wrap;
@@ -153,28 +161,25 @@ nav{
 .btn-primary{
   background:var(--teal);
   color:#061018;
-  padding:14px 30px;
+  padding:14px 28px;
   border-radius:30px;
   text-decoration:none;
   font-weight:600;
   transition:0.3s;
 }
 
-.btn-primary:hover{
-  transform:translateY(-3px);
-}
-
 .btn-outline{
   border:1px solid rgba(27,188,155,0.3);
   color:var(--teal);
-  padding:14px 30px;
+  padding:14px 28px;
   border-radius:30px;
   text-decoration:none;
   transition:0.3s;
 }
 
+.btn-primary:hover,
 .btn-outline:hover{
-  background:rgba(27,188,155,0.08);
+  transform:translateY(-3px);
 }
 
 .hero-stats{
@@ -192,15 +197,15 @@ nav{
 .stat-num{
   display:block;
   font-family:'Syne',sans-serif;
-  font-size:36px;
-  font-weight:800;
+  font-size:34px;
   color:var(--teal);
+  font-weight:800;
 }
 
 .stat-label{
+  margin-top:5px;
   color:var(--muted);
   font-size:13px;
-  margin-top:6px;
 }
 
 /* SECTION */
@@ -224,8 +229,7 @@ nav{
 
 .section-title{
   font-family:'Syne',sans-serif;
-  font-size:clamp(36px,5vw,56px);
-  color:#fff;
+  font-size:clamp(36px,5vw,60px);
   margin-bottom:1.5rem;
 }
 
@@ -235,20 +239,20 @@ nav{
   max-width:700px;
 }
 
-/* CARDS */
+/* GRID */
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.5rem;
   margin-top:3rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1.5rem;
 }
 
 .card{
   background:var(--card);
-  border:1px solid rgba(255,255,255,0.05);
-  border-radius:18px;
   padding:2rem;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.05);
   transition:0.3s;
 }
 
@@ -258,8 +262,7 @@ nav{
 }
 
 .card h3{
-  color:#fff;
-  margin:1rem 0;
+  margin-bottom:1rem;
   font-family:'Syne',sans-serif;
 }
 
@@ -268,52 +271,93 @@ nav{
   line-height:1.7;
 }
 
-.card .big{
+.big{
   margin-top:1rem;
-  font-size:28px;
-  font-family:'Syne',sans-serif;
   color:var(--teal);
+  font-family:'Syne',sans-serif;
+  font-size:28px;
+  font-weight:800;
 }
 
-/* CTA */
+/* QUOTE SECTION */
 
-.cta{
-  text-align:center;
+.quote-section{
   padding:7rem 2rem;
+  text-align:center;
 }
 
-.cta h2{
+.quote-section h2{
   font-family:'Syne',sans-serif;
   font-size:clamp(40px,6vw,70px);
-  margin-bottom:1rem;
 }
 
-.cta p{
+.quote-section p{
+  margin-top:1rem;
   color:var(--muted);
-  margin-bottom:2rem;
   font-size:18px;
 }
 
-.contact-buttons{
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
+.quote-box{
+  max-width:800px;
+  margin:3rem auto 0;
+  background:var(--card);
+  padding:40px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.quote-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+form input,
+form textarea{
+  width:100%;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  padding:15px;
+  color:#fff;
+  font-size:15px;
+  outline:none;
+  font-family:'DM Sans',sans-serif;
+}
+
+form textarea{
+  margin-top:18px;
+  resize:vertical;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+  color:#4a7fa0;
+}
+
+form input:focus,
+form textarea:focus{
+  border-color:var(--teal);
+}
+
+.submit-btn{
+  margin-top:20px;
+  border:none;
+  cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
   padding:3rem 2rem;
-  background:var(--mid);
   text-align:center;
+  background:var(--mid);
 }
 
 .footer-logo{
   font-family:'Syne',sans-serif;
-  font-size:30px;
+  font-size:28px;
   font-weight:800;
-  margin-bottom:0.5rem;
 }
 
 .footer-logo span{
@@ -330,19 +374,19 @@ footer{
 
 .whatsapp-float{
   position:fixed;
-  bottom:24px;
-  right:24px;
   width:60px;
   height:60px;
-  border-radius:50%;
+  bottom:24px;
+  right:24px;
   background:#25D366;
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-decoration:none;
   font-size:30px;
-  z-index:999;
+  text-decoration:none;
   box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  z-index:999;
   transition:0.3s;
 }
 
@@ -366,27 +410,36 @@ footer{
     font-size:17px;
   }
 
+  .quote-grid{
+    grid-template-columns:1fr;
+  }
+
 }
+
 </style>
 </head>
 
 <body id="top">
 
-<!-- NAV -->
+<!-- NAVBAR -->
 
 <nav>
-  <a href="#top" class="nav-logo">Clima<span>Pure</span></a>
+
+  <a href="#top" class="nav-logo">
+    Clima<span>Pure</span>
+  </a>
 
   <ul class="nav-links">
     <li><a href="#problem">Problem</a></li>
     <li><a href="#technology">Technology</a></li>
     <li><a href="#market">Market</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#quote">Quote</a></li>
   </ul>
 
-  <a href="mailto:hello@climapure.in?subject=ClimaPure%20Inquiry" class="nav-cta">
+  <a href="#quote" class="nav-cta">
     Get a Quote
   </a>
+
 </nav>
 
 <!-- HERO -->
@@ -402,18 +455,20 @@ footer{
   </h1>
 
   <p class="hero-sub">
-    India's earth-powered healthy-air residential infrastructure.
+    India's first earth-powered healthy-air infrastructure.
     Cool in summer. Warm in winter. Purified always.
   </p>
 
   <div class="hero-btns">
+
     <a href="#technology" class="btn-primary">
       See How It Works
     </a>
 
-    <a href="mailto:hello@climapure.in?subject=Request%20Installation" class="btn-outline">
+    <a href="#quote" class="btn-outline">
       Request Installation
     </a>
+
   </div>
 
   <div class="hero-stats">
@@ -457,33 +512,32 @@ footer{
     </h2>
 
     <p class="section-body">
-      Extreme heat and hazardous AQI are reshaping how homes must be built.
-      Traditional split AC systems were never designed for this future.
+      Rising temperatures and dangerous AQI levels are changing how homes must be cooled and ventilated.
     </p>
 
     <div class="grid">
 
       <div class="card">
         <h3>🌡️ Extreme Heat</h3>
-        <p>North Indian summers regularly exceed 44°C.</p>
+        <p>North Indian summers regularly exceed dangerous levels.</p>
         <div class="big">44°C+</div>
       </div>
 
       <div class="card">
-        <h3>🌫️ Toxic AQI</h3>
-        <p>PM2.5, smoke and urban pollution make outdoor air dangerous.</p>
+        <h3>🌫️ Hazardous AQI</h3>
+        <p>PM2.5 and smoke pollution create unhealthy indoor conditions.</p>
         <div class="big">AQI 200+</div>
       </div>
 
       <div class="card">
-        <h3>⚡ High Energy Bills</h3>
-        <p>Multi-AC homes continuously consume huge power.</p>
+        <h3>⚡ High Bills</h3>
+        <p>Multiple AC systems consume huge electricity continuously.</p>
         <div class="big">5–10kW</div>
       </div>
 
       <div class="card">
-        <h3>💨 Stale Indoor Air</h3>
-        <p>Conventional AC systems recirculate the same air endlessly.</p>
+        <h3>💨 Stale Air</h3>
+        <p>Traditional ACs recirculate old oxygen-depleted indoor air.</p>
         <div class="big">0% Fresh Air</div>
       </div>
 
@@ -500,47 +554,37 @@ footer{
   <div class="container">
 
     <div class="section-tag">
-      Core Technology
+      Technology
     </div>
 
     <h2 class="section-title">
-      Passive earth-powered climate engineering
+      Earth-powered climate engineering
     </h2>
 
     <p class="section-body">
-      ClimaPure combines geothermal cooling, HEPA purification,
-      smart airflow zoning and low-energy mechanical systems.
+      ClimaPure combines geothermal cooling, HEPA purification and intelligent airflow systems.
     </p>
 
     <div class="grid">
 
       <div class="card">
         <h3>🌍 Earth Tunnel Cooling</h3>
-        <p>
-          Underground pipe loops use stable earth temperatures
-          to cool incoming air naturally.
-        </p>
+        <p>Underground HDPE loops naturally cool incoming air.</p>
       </div>
 
       <div class="card">
         <h3>🔬 HEPA Filtration</h3>
-        <p>
-          Removes PM2.5, smoke, allergens and airborne contaminants.
-        </p>
+        <p>Medical-grade air purification removes PM2.5 and allergens.</p>
       </div>
 
       <div class="card">
         <h3>☀️ Solar Integration</h3>
-        <p>
-          Fully compatible with rooftop solar and battery systems.
-        </p>
+        <p>Fully compatible with rooftop solar and battery systems.</p>
       </div>
 
       <div class="card">
         <h3>🏠 Smart Zoning</h3>
-        <p>
-          Air delivery adjusts floor-wise for maximum efficiency.
-        </p>
+        <p>Conditioned airflow only where needed for maximum efficiency.</p>
       </div>
 
     </div>
@@ -560,35 +604,28 @@ footer{
     </div>
 
     <h2 class="section-title">
-      Built for modern premium homes
+      Built for future-ready homes
     </h2>
 
     <p class="section-body">
-      Designed for villas, G+2 homes, luxury renovations,
-      wellness spaces and future-ready architecture.
+      Designed for villas, G+2 homes, farmhouses and wellness-focused architecture.
     </p>
 
     <div class="grid">
 
       <div class="card">
         <h3>🏗️ Urban Homes</h3>
-        <p>
-          Compact plots with vertical airflow systems.
-        </p>
+        <p>Compact modern homes with vertical airflow zoning.</p>
       </div>
 
       <div class="card">
         <h3>🏡 Premium Villas</h3>
-        <p>
-          Luxury custom builds prioritizing wellness and sustainability.
-        </p>
+        <p>Luxury custom homes prioritizing sustainability and wellness.</p>
       </div>
 
       <div class="card">
         <h3>🌾 Farmhouses</h3>
-        <p>
-          Large plots ideal for maximum geothermal efficiency.
-        </p>
+        <p>Large plots allowing maximum geothermal efficiency.</p>
       </div>
 
     </div>
@@ -597,29 +634,68 @@ footer{
 
 </section>
 
-<!-- CTA -->
+<!-- QUOTE SECTION -->
 
-<section class="cta" id="contact">
+<section class="quote-section" id="quote">
 
   <h2>
-    Ready to breathe differently?
+    Get Your ClimaPure Quote
   </h2>
 
   <p>
-    Get a custom site assessment and design proposal.
+    Share your home details and receive a custom assessment.
   </p>
 
-  <div class="contact-buttons">
+  <div class="quote-box">
 
-    <a href="mailto:hello@climapure.in?subject=ClimaPure%20Inquiry"
-       class="btn-primary">
-       Contact ClimaPure
-    </a>
+    <form action="mailto:krishnasinghal999000@gmail.com"
+          method="POST"
+          enctype="text/plain">
 
-    <a href="tel:+919999999999"
-       class="btn-outline">
-       Schedule a Call
-    </a>
+      <div class="quote-grid">
+
+        <input type="text"
+               name="Name"
+               placeholder="Your Name"
+               required>
+
+        <input type="text"
+               name="City"
+               placeholder="City"
+               required>
+
+        <input type="text"
+               name="Plot Size"
+               placeholder="Plot Size (e.g. 200 sq yd)"
+               required>
+
+        <input type="text"
+               name="Floors"
+               placeholder="Number of Floors"
+               required>
+
+        <input type="text"
+               name="Rooms Per Floor"
+               placeholder="Rooms Per Floor"
+               required>
+
+        <input type="email"
+               name="Email"
+               placeholder="Your Email"
+               required>
+
+      </div>
+
+      <textarea name="Project Details"
+                rows="5"
+                placeholder="Tell us about your project..."></textarea>
+
+      <button type="submit"
+              class="btn-primary submit-btn">
+        Request Quote
+      </button>
+
+    </form>
 
   </div>
 
@@ -633,12 +709,8 @@ footer{
     Clima<span>Pure</span>
   </div>
 
-  <p>
-    Earth · Air · Balance
-  </p>
-
   <div class="footer-copy">
-    © 2026 ClimaPure. Designed in India for India’s climate.
+    © 2026 ClimaPure — Earth · Air · Balance
   </div>
 
 </footer>
@@ -653,3 +725,4 @@ footer{
 
 </body>
 </html>
+```
